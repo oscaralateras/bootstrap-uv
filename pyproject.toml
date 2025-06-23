@@ -1,0 +1,29 @@
+[project]
+name = "bootstrap_uv"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "Jim Alateras", email = "jima@comware.com.au"}
+]
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "click>=8.1.8,<9.0.0",
+    "toml>=0.10.2,<0.11.0",
+    "python-dotenv>=1.1.0,<2.0.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "ruff>=0.11.6",
+    "black>=25.1.0",
+    "pytest>=8.3.5",
+]
+
+[build-system]
+requires = ["hatchling>=1.21.0"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["bootstrap_uv"]
+
