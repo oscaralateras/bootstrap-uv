@@ -1,5 +1,6 @@
 import click
 
+
 @click.command("test", help="test")
 def test():
     """Say this is a test command."""

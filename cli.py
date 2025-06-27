@@ -5,6 +5,7 @@ from bootstrap_uv.hello import hello
 from bootstrap_uv.calc import calc
 from bootstrap_uv.test import test
 
+
 @click.group()
 def cli():
     pass
