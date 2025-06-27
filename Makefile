@@ -45,4 +45,5 @@ calc:
 test:
 	@uv run python ${CLI} test
 
-
+pandas1:
+	@uv run python ${CLI} pandas1 --file="$(FILE)" --mode="$(MODE)"
