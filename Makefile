@@ -1,4 +1,4 @@
-.PHONY: lint format version sync install-dev
+.PHONY: lint format version sync install-dev hello
 SHELL := /bin/bash
 CLI := cli.py
 
@@ -18,7 +18,6 @@ install-dev:
 
 sync:
 	@echo "Syncing dependencies..."
-	@uv pip install -e .
 
 lint:
 	@echo "Running linter..."
@@ -34,3 +33,8 @@ format:
 
 version:
 	@uv run python ${CLI} version
+
+hello:
+	@uv run python ${CLI} hello
+
+
