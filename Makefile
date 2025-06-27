@@ -1,6 +1,8 @@
 .PHONY: lint format version sync install-dev hello calc test
 SHELL := /bin/bash
 CLI := cli.py
+NUM1 ?= 1
+NUM2 ?= 2
 
 hooks:	.git/hooks/pre-commit
 
@@ -38,7 +40,7 @@ hello:
 	@uv run python ${CLI} hello
 
 calc:
-	@uv run python ${CLI} calc
+	@uv run python ${CLI} calc --num1 $(NUM1) --num2 $(NUM2)
 
 test:
 	@uv run python ${CLI} test
