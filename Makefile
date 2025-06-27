@@ -1,4 +1,4 @@
-.PHONY: lint format version sync install-dev hello
+.PHONY: lint format version sync install-dev hello calc
 SHELL := /bin/bash
 CLI := cli.py
 
@@ -36,5 +36,8 @@ version:
 
 hello:
 	@uv run python ${CLI} hello
+
+calc:
+	@uv run python ${CLI} calc
 
 
